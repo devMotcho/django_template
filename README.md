@@ -9,6 +9,7 @@ This project serves as a template for Django projects, providing the following t
 - Main.html imports Font Awesome, Chart Js, and Bootstrap 5
 - Change Mode to Dark and Light
 - gitignore file
+- Nice log in page
 
 ## How to use?
 
@@ -34,7 +35,7 @@ This project serves as a template for Django projects, providing the following t
    ```
 6. Create a superuser
    ```
-   py manage.py createsuperuser
+   py manage.py createsuperuser --username=example --email=123@example.com
    ```
 7. Or make a new app
    ```

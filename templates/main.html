@@ -10,6 +10,7 @@
     <!-- Tags -->
     <title>{% block title %} {% endblock title %}</title>
     {% block scripts %} {% endblock scripts %}
+    {% block styles %} {% endblock styles %}
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
@@ -32,10 +33,7 @@
             {% include 'alerts.html' %}
             {% block content %}
             {% endblock content %}
-            <a href="#" class="theme-toggle">
-                <i class="fa-regular fa-moon"></i>
-                <i class="fa-regular fa-sun"></i>
-            </a>
+            {% include 'theme.html' %}
             {% include 'footer.html' %}
         </div>
     </div>

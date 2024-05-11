@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'styles/login.css' %}">
+{% endblock styles %}
+{% block content %}
+<main class="content px-3 py-2">
+    <div class="form-login">
+        <form method="POST", action="">
+            {% csrf_token %}
+            <div class="wrapper-login">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <i class="bx bxs-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password"
+                    placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-warning">Login</button>
+
+                <div class="register-link">
+                    <p>Don't have a account?
+                        <a href="#">Register</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
+{% endblock content %}
